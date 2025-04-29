@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif; /* Встановлюємо шрифт Arial з запасним варіантом sans-serif */
+}
+nav ul {
+    list-style-type: none; /* Видаляємо маркери списку */
+    padding: 10; /* Встановлюємо відступи */
+    background-color: #ffffff; /* Білий фон для списку */
+    width: 200px; /* Задаємо ширину меню */
+}
+nav ul li {
+    display: block; /* Відображаємо як блоковий елемент */
+    margin-bottom: 10px; /* Розділяємо блоки */
+}
+nav ul li a {
+    text-decoration: none; /* Видаляємо підкреслення у посиланнях */
+    padding: 10px 20px; /* Встановлюємо внутрішні відступи */
+    display: flex; /* Використовуємо flex для вирівнювання */
+    justify-content: space-between; /* Вирівнюємо елементи на відстані один від одного */
+    background-color: #ffffff; /* Загальний фон */
+    transition: background-color 0.3s ease; /* Анімація зміни фону при наведенні */
+}
+nav ul li:nth-child(odd) a {
+    background-color: blue; /* Кольори для пунктів 1, 3, 5 */
+    color: white; /* Білий колір тексту */
+}
+nav ul li:nth-child(even) a {
+    background-color: white; /* Фон для пунктів 2, 4 */
+    color: blue; /* Синій колір тексту */
+    border: 2px solid blue; /* Додаємо синю рамку */
+}
+nav ul li:nth-child(2) a::after,
+nav ul li:nth-child(4) a::after {
+    content: "✈️"; /* Додаємо символ літака для пунктів 2 та 4 */
+}
+nav ul li a:hover {
+    background-color: #0f0065; /* Зміна фону при наведенні курсора */
+}
